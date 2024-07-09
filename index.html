@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </head>
+
 <body>
     <header>
         <h1>My Portfolio</h1>
@@ -18,27 +26,47 @@
             </ul>
         </nav>
     </header>
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <h2>About Me</h2>
         <p>This is where you describe yourself.</p>
     </section>
-    <section id="projects">
+
+<section id="projects" data-aos="fade-up">
         <h2>Projects</h2>
-        <div class="project">
+        <div class="project" onclick="showProjectDetails('Project 1', 'Description of Project 1.')">
             <h3>Project 1</h3>
             <p>Description of Project 1.</p>
         </div>
-        <div class="project">
+        <div class="project" onclick="showProjectDetails('Project 2', 'Description of Project 2.')">
             <h3>Project 2</h3>
             <p>Description of Project 2.</p>
         </div>
     </section>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
     <section id="contact">
         <h2>Contact</h2>
-        <p>Contact information goes here.</p>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
+    
     <footer>
         <p>&copy; 2024 My Portfolio</p>
     </footer>
 </body>
+
 </html>
