@@ -1,32 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("JavaScript loaded!");
-});
-function showProjectDetails(title, description) {
-    document.getElementById('modalTitle').innerText = title;
-    document.getElementById('modalDescription').innerText = description;
-    document.getElementById('projectModal').style.display = 'block';
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const projectLinks = document.querySelectorAll('.project a');
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const closeModalBtn = document.querySelector('.close');
 
-function closeModal() {
-    document.getElementById('projectModal').style.display = 'none';
-}
+    projectLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            modalTitle.textContent = link.parentElement.querySelector('h3').textContent;
+            modalDescription.textContent = link.parentElement.querySelector('p').textContent;
+            modal.style.display = 'block';
+        });
+    });
 
-window.onclick = function (event) {
-    if (event.target == document.getElementById('projectModal')) {
-        document.getElementById('projectModal').style.display = 'none';
-    }
-}
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Simple form validation
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    if (name && email && message) {
-        alert('Thank you for your message!');
-        // Here you can add code to send the form data to your email or server
-    } else {
-        alert('Please fill out all fields.');
-    }
+    closeModalBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 });

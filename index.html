@@ -1,47 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Neha Wasnik's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
-
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </head>
-
 <body>
     <header>
-        <h1>My Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="Neha_Wasnik_Resume.pdf" download>Download Resume</a></li>
             </ul>
         </nav>
     </header>
-    <section id="about" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>This is where you describe yourself.</p>
-    </section>
-
-<section id="projects" data-aos="fade-up">
-        <h2>Projects</h2>
-        <div class="project" onclick="showProjectDetails('Project 1', 'Description of Project 1.')">
-            <h3>Project 1</h3>
-            <p>Description of Project 1.</p>
-        </div>
-        <div class="project" onclick="showProjectDetails('Project 2', 'Description of Project 2.')">
-            <h3>Project 2</h3>
-            <p>Description of Project 2.</p>
-        </div>
-    </section>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Neha Wasnik</h1>
+                <p>Software Developer</p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="content">
+                <h2>About Me</h2>
+                <p>I'm Neha Wasnik, a software developer with experience in developing secure payment solutions, designing RESTful APIs, and creating intuitive UI/UX for Android applications.</p>
+            </div>
+        </section>
+        <section id="experience">
+            <div class="content">
+                <h2>Experience</h2>
+                <div class="experience-container">
+                    <div class="job">
+                        <h3>Ftcash (Nomisma Mobile Solutions Pvt Ltd)</h3>
+                        <p>Software Developer, Mumbai | Jan 2023 - Present</p>
+                        <p>Implemented secure payment solutions using Lyra Payment gateway.</p>
+                        <p>Designed RESTful APIs for seamless data exchange.</p>
+                        <p>Designed and implemented intuitive UI/UX for Android applications.</p>
+                        <p>Integrated API into Android applications, ensuring seamless data retrieval and submission.</p>
+                        <p>Identified and resolved technical issues within Android applications.</p>
+                    </div>
+                    <div class="job">
+                        <h3>Maxgen Technologies Pvt. Ltd</h3>
+                        <p>Jr. Python Developer, Mumbai | Feb 2019 - Feb 2020</p>
+                        <p>Developed a web application using Python and Django that improved scalability and reliability.</p>
+                        <p>Developed a REST API using the Django framework that allowed communication between multiple services.</p>
+                        <p>Created a dashboard that visually represented key business metrics in real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="content">
+                <h2>Projects</h2>
+                <div class="projects-container">
+                    <div class="project">
+                        <h3>Artinq</h3>
+                        <p>Interior Designer Website using Python, Django, HTML, CSS, SQL.</p>
+                        <a href="https://github.com/neehhaa/Artinq" target="_blank">View Project</a>
+                    </div>
+                    <div class="project">
+                        <h3>Speech Emotion Recognition</h3>
+                        <p>Model to recognize emotion using Python, Assembly AI API, Matplotlib, Numpy.</p>
+                        <a href="https://github.com/neehhaa/Speech_Emotion" target="_blank">View Project</a>
+                    </div>
+                    <div class="project">
+                        <h3>Jewelry Management System</h3>
+                        <p>Jewelry Shop Website using Python, Django, HTML, CSS, SQL.</p>
+                        <a href="https://github.com/neehhaa/Jewellery-Management-System" target="_blank">View Project</a>
+                    </div>
+                    <div class="project">
+                        <h3>Nihongo</h3>
+                        <p>Japanese learning website using Python, Django, HTML, CSS, SQL.</p>
+                        <a href="https://github.com/neehhaa/Nihongo" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="content">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <p>Java, Kotlin, Python, Git, HTML, CSS, Embedded C</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Libraries/Frameworks</h3>
+                        <p>Android, Restful API, Django, Numpy</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools/Platforms</h3>
+                        <p>Android Studio, GitLab, GitHub, Jupyter, Linux, Arduino, RFID Applications</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <p>Oracle, SQL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="content">
+                <h2>Contact</h2>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Neha Wasnik</p>
+    </footer>
 
     <div id="projectModal" class="modal">
         <div class="modal-content">
@@ -51,22 +135,6 @@
         </div>
     </div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 My Portfolio</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
-
 </html>
